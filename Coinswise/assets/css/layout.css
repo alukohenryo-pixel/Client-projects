@@ -1,0 +1,17 @@
+section{
+
+    padding:120px 0;
+
+}
+
+.grid{
+
+    display:grid;
+
+}
+
+.flex{
+
+    display:flex;
+
+}

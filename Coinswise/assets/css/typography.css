@@ -1,0 +1,27 @@
+h1{
+
+    font-size:68px;
+
+    font-weight:700;
+
+    line-height:1.08;
+
+}
+
+h2{
+
+    font-size:48px;
+
+    font-weight:700;
+
+}
+
+p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:var(--paragraph);
+
+}

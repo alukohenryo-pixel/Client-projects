@@ -1,0 +1,68 @@
+/* ==========================================
+   CoinsWise Design Tokens
+   Developed by GBBM Digital Solutions
+   ========================================== */
+
+:root{
+
+    /* Brand Colors */
+
+    --primary:#6C3BFF;
+    --primary-dark:#5A2EEB;
+    --primary-light:#8E67FF;
+
+    --secondary:#00C2FF;
+    --accent:#FF6EC7;
+
+    --success:#25D366;
+    --telegram:#229ED9;
+
+    /* Neutral */
+
+    --white:#FFFFFF;
+    --black:#161616;
+
+    --text:#444444;
+    --paragraph:#666666;
+
+    --border:#ECECEC;
+
+    --background:#F8F9FD;
+
+    /* Glass */
+
+    --glass:rgba(255,255,255,.72);
+
+    --glass-border:rgba(255,255,255,.4);
+
+    /* Radius */
+
+    --radius-sm:12px;
+    --radius-md:18px;
+    --radius-lg:24px;
+    --radius-xl:30px;
+    --radius-pill:999px;
+
+    /* Shadows */
+
+    --shadow-sm:
+    0 8px 20px rgba(0,0,0,.05);
+
+    --shadow-md:
+    0 20px 50px rgba(0,0,0,.08);
+
+    --shadow-lg:
+    0 40px 80px rgba(0,0,0,.12);
+
+    --button-shadow:
+    0 12px 30px rgba(108,59,255,.25);
+
+    /* Width */
+
+    --container:1280px;
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+}
