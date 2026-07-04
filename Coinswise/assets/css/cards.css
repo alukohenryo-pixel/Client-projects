@@ -141,3 +141,376 @@
     line-height:1.8;
 
 }
+
+
+/* ===========================================
+   HOW IT WORKS
+=========================================== */
+
+#how-it-works{
+
+    padding:120px 0;
+
+    background:#F8F9FD;
+
+}
+
+.steps-wrapper{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr auto
+        1fr auto
+        1fr auto
+        1fr;
+
+    align-items:start;
+
+    gap:24px;
+
+    margin-top:70px;
+
+}
+
+.step-card{
+
+    text-align:center;
+
+}
+
+.step-icon{
+
+    width:110px;
+
+    height:110px;
+
+    margin:auto;
+
+    border-radius:26px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:42px;
+
+    color:white;
+
+    margin-bottom:28px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.step-card h3{
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+    color:#161616;
+
+}
+
+.step-card p{
+
+    max-width:220px;
+
+    margin:auto;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.step-arrow{
+
+    position:relative;
+
+    width:80px;
+
+    height:2px;
+
+    margin-top:55px;
+
+    background:transparent;
+
+}
+
+.step-arrow::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    left:0;
+
+    width:100%;
+
+    border-top:2px dashed #D8D8D8;
+
+}
+
+.step-arrow::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-8px;
+
+    top:calc(50% - 5px);
+
+    width:10px;
+
+    height:10px;
+
+    border-top:2px solid #D8D8D8;
+
+    border-right:2px solid #D8D8D8;
+
+    transform:rotate(45deg);
+
+}
+
+
+/* =====================================
+STATISTICS
+===================================== */
+
+#statistics{
+
+    padding:130px 0;
+
+    background:#F8F9FD;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+
+.stat-card{
+
+    background:#FFFFFF;
+
+    border-radius:28px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(15,23,42,.06);
+
+    transition:.35s ease;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 30px 80px rgba(15,23,42,.10);
+
+}
+
+.stat-icon{
+
+    width:85px;
+
+    height:85px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(135deg,#6C3BFF,#00C2FF);
+
+    color:white;
+
+    font-size:32px;
+
+}
+
+.stat-card h3{
+
+    font-size:44px;
+
+    font-weight:700;
+
+    color:#161616;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card span{
+
+    color:#666;
+
+    font-size:16px;
+
+}
+
+
+/* ==========================================
+TESTIMONIALS
+========================================== */
+
+#testimonials{
+
+    padding:130px 0;
+
+    background:#FFFFFF;
+
+}
+
+.testimonial-slider{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:70px;
+
+}
+
+.testimonial-track{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    flex:1;
+
+}
+
+.testimonial-card{
+
+    background:#FFFFFF;
+
+    border-radius:28px;
+
+    padding:35px;
+
+    box-shadow:0 18px 60px rgba(15,23,42,.08);
+
+    transition:.35s;
+
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stars{
+
+    color:#FFD43B;
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+}
+
+.testimonial-card p{
+
+    line-height:1.9;
+
+    color:#555;
+
+    margin-bottom:30px;
+
+}
+
+.customer{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.customer img{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.customer strong{
+
+    display:block;
+
+    font-size:18px;
+
+}
+
+.customer span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.slider-btn{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#6C3BFF;
+
+    color:#FFFFFF;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.slider-btn:hover{
+
+    transform:scale(1.08);
+
+}
