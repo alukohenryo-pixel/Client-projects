@@ -1,7 +1,4 @@
-/* ==========================================================
-   CoinsWise Live Rates
-   Powered by CoinGecko API
-   Developed by GBBM Digital Solutions
+  /* Developed by GBBM Digital Solutions
 ========================================================== */
 
 const API_URL =
@@ -93,9 +90,7 @@ function buildRow(coin) {
 
 <div class="coin-info">
 
-<img
-src="${coin.image}"
-alt="${coin.name}">
+<img src="${coin.image}" alt="${coin.name}">
 
 <div>
 
@@ -129,7 +124,9 @@ ${percentageValue(coin.price_change_percentage_24h)}
 
 <td>
 
-<a href="https://wa.me/234XXXXXXXXXX"
+<a
+
+href="https://wa.me/234XXXXXXXXXX"
 
 target="_blank"
 
@@ -152,23 +149,25 @@ Buy / Sell
 ========================================== */
 
 function loadingState() {
-
+    
+    if (!ratesBody) return;
+    
     ratesBody.innerHTML = `
 
-<tr>
+    <tr>
 
-<td colspan="5"
+        <td colspan="5"
 
-style="text-align:center;padding:40px;">
+            style="text-align:center;padding:40px;">
 
-Loading live market rates...
+            Loading live market rates...
 
-</td>
+        </td>
 
-</tr>
+    </tr>
 
-`;
-
+    `;
+    
 }
 
 /* ==========================================
@@ -176,75 +175,152 @@ Loading live market rates...
 ========================================== */
 
 function errorState() {
-
+    
+    if (!ratesBody) return;
+    
     ratesBody.innerHTML = `
 
-<tr>
+    <tr>
 
-<td colspan="5"
+        <td colspan="5"
 
-style="text-align:center;padding:40px;color:#d9534f;">
+            style="text-align:center;padding:40px;color:#d9534f;">
 
-Unable to load live rates.
+            Unable to load live rates.
 
-Please try again shortly.
+        </td>
 
-</td>
+    </tr>
 
-</tr>
-
-`;
-
+    `;
+    
 }
-
 /* ==========================================
    Fetch Rates
 ========================================== */
 
+/* ==========================================
+   Fetch Live Rates
+========================================== */
+
 async function fetchRates() {
-
+    
+    if (!ratesBody) {
+        
+        console.error("rates-body element not found.");
+        
+        return;
+        
+    }
+    
     loadingState();
-
+    
     try {
-
+        
         const response = await fetch(API_URL);
-
+        
         if (!response.ok) {
-
-            throw new Error("Network response was not successful.");
-
+            
+            throw new Error(`HTTP ${response.status}`);
+            
         }
-
+        
         const data = await response.json();
-
-        ratesBody.innerHTML = "";
-
+        
+        let rows = "";
+        
+        const dashboardMap = {
+            
+            bitcoin: "btc-price",
+            
+            ethereum: "eth-price",
+            
+            tether: "usdt-price",
+            
+            binancecoin: "bnb-price"
+            
+        };
+        
+        let portfolioTotal = 0;
+        
         data.forEach((coin) => {
-
-            ratesBody.innerHTML += buildRow(coin);
-
+            
+            rows += buildRow(coin);
+            
+            const dashboardElement = document.getElementById(
+                
+                dashboardMap[coin.id]
+                
+            );
+            
+            if (dashboardElement) {
+                
+                dashboardElement.textContent =
+                    
+                    formatNGN(coin.current_price);
+                
+            }
+            
+            portfolioTotal += coin.current_price;
+            
         });
-
+        
+        ratesBody.innerHTML = rows;
+        
+        const portfolio = document.getElementById(
+            
+            "portfolio-balance"
+            
+        );
+        
+        if (portfolio) {
+            
+            portfolio.textContent =
+                
+                formatNGN(portfolioTotal);
+            
+        }
+        
     }
-
+    
     catch (error) {
-
-        console.error(error);
-
+        
+        console.error("CoinGecko Error:", error);
+        
         errorState();
-
+        
+        [
+            
+            "btc-price",
+            
+            "eth-price",
+            
+            "usdt-price",
+            
+            "bnb-price",
+            
+            "portfolio-balance"
+            
+        ].forEach((id) => {
+            
+            const el = document.getElementById(id);
+            
+            if (el) {
+                
+                el.textContent = "--";
+                
+            }
+            
+        });
+        
     }
-
+    
 }
 
-/* ==========================================
-   Initialize
-========================================== */
-
-fetchRates();
-
-/* ==========================================
-   Refresh Every Minute
-========================================== */
-
-setInterval(fetchRates, 60000);
+document.addEventListener("DOMContentLoaded", () => {
+    
+    fetchRates();
+    
+    setInterval(fetchRates, 60000);
+    
+});

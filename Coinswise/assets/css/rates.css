@@ -1,157 +1,196 @@
-/* ===========================
-   FLOATING RATES CARD
-=========================== */
+/* ==========================================================
+   RATES
+   Developed by GBBM Digital Solutions
+========================================================== */
 
-#rates{
-
-    position:relative;
-
-    margin-top:-140px;
-
-    z-index:20;
-
+#rates {
+    
+    position: relative;
+    
+    margin-top: -165px;
+    
+    z-index: 100;
+    
 }
 
-.rates-card{
-
-    width:min(92%,1400px);
-
-    margin:auto;
-
-    background:#fff;
-
-    border-radius:28px;
-
-    overflow:hidden;
-
+.rates-card {
+    
+    background: #fff;
+    
+    border-radius: 28px;
+    
+    overflow: hidden;
+    
     box-shadow:
-        0 30px 90px rgba(21,22,41,.08);
-
+    
+        0 18px 70px rgba(15, 23, 42, .08);
+    
+    border: 1px solid rgba(0, 0, 0, .04);
+    
 }
 
-.rates-header{
+/* Header */
 
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:36px 38px;
-
-    border-bottom:1px solid #f2f2f2;
-
+.rates-header {
+    
+    display: flex;
+    
+    justify-content: space-between;
+    
+    align-items: center;
+    
+    padding: 34px 42px;
+    
+    border-bottom: 1px solid #f2f2f2;
+    
 }
 
-.rates-header h2{
-
-    font-size:34px;
-
-    font-weight:700;
-
+.rates-header h2 {
+    
+    font-size: 34px;
+    
+    font-weight: 700;
+    
+    color: #151515;
+    
 }
 
-.rates-header a{
-
-    color:#6C3BFF;
-
-    font-weight:600;
-
+.rates-header a {
+    
+    color: #7c3aed;
+    
+    text-decoration: none;
+    
+    font-weight: 600;
+    
 }
 
-table{
+/* Table */
 
-    width:100%;
-
-    border-collapse:collapse;
-
+table {
+    
+    width: 100%;
+    
+    border-collapse: collapse;
+    
 }
 
-thead th{
-
-    padding:24px 38px;
-
-    text-align:left;
-
-    color:#666;
-
-    font-size:15px;
-
-    font-weight:600;
-
+thead {
+    
+    background: #fff;
+    
 }
 
-tbody td{
-
-    padding:30px 38px;
-
-    border-bottom:1px solid #F4F4F4;
-
+th {
+    
+    padding: 26px 42px;
+    
+    text-align: left;
+    
+    font-size: 15px;
+    
+    color: #8a8a8a;
+    
+    font-weight: 600;
+    
 }
 
-tbody tr:last-child td{
-
-    border-bottom:none;
-
+td {
+    
+    padding: 30px 42px;
+    
+    border-top: 1px solid #f4f4f4;
+    
+    font-size: 17px;
+    
 }
 
+/* Coin */
 
-.coin-info{
-
-display:flex;
-
-align-items:center;
-
-gap:16px;
-
+.coin-info {
+    
+    display: flex;
+    
+    align-items: center;
+    
+    gap: 18px;
+    
 }
 
-.coin-info img{
-
-width:42px;
-
-height:42px;
-
-border-radius:50%;
-
+.coin-info img {
+    
+    width: 48px;
+    
+    height: 48px;
+    
 }
 
-.coin-info strong{
-
-display:block;
-
-font-size:18px;
-
-font-weight:600;
-
-color:#161616;
-
+.coin-info strong {
+    
+    display: block;
+    
+    font-size: 22px;
+    
 }
 
-.coin-info span{
-
-display:block;
-
-font-size:14px;
-
-color:#777;
-
-margin-top:4px;
-
+.coin-info span {
+    
+    color: #888;
+    
+    font-size: 14px;
+    
 }
 
-.green{
+/* Change */
 
-color:#18B566;
-
-font-weight:600;
-
+.green {
+    
+    color: #16a34a;
+    
+    font-weight: 700;
+    
 }
 
-.red{
+.red {
+    
+    color: #ef4444;
+    
+    font-weight: 700;
+    
+}
 
-color:#E63946;
+/* Button */
 
-font-weight:600;
+.trade-btn {
+    
+    display: flex;
+    
+    justify-content: center;
+    
+    align-items: center;
+    
+    width: 145px;
+    
+    height: 54px;
+    
+    border-radius: 14px;
+    
+    border: 2px solid #b993ff;
+    
+    color: #7c3aed;
+    
+    text-decoration: none;
+    
+    font-weight: 700;
+    
+    transition: .25s;
+    
+}
 
+.trade-btn:hover {
+    
+    background: #7c3aed;
+    
+    color: #fff;
+    
 }

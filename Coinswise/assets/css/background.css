@@ -1,0 +1,108 @@
+/* ==========================================
+   Decorative Background System
+========================================== */
+
+.bg-shapes{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+.bg-blob{
+
+    position:absolute;
+
+    opacity:.18;
+
+    filter:blur(30px);
+
+    animation:blobFloat 16s ease-in-out infinite;
+
+}
+
+.blob-1{
+
+    width:500px;
+
+    top:-80px;
+
+    left:-120px;
+
+}
+
+.blob-2{
+
+    width:620px;
+
+    top:900px;
+
+    right:-180px;
+
+    animation-delay:3s;
+
+}
+
+.blob-3{
+
+    width:450px;
+
+    bottom:200px;
+
+    left:-100px;
+
+    animation-delay:6s;
+
+}
+
+.bg-dots{
+
+    position:absolute;
+
+    top:1600px;
+
+    right:5%;
+
+    width:180px;
+
+    opacity:.08;
+
+}
+
+@keyframes blobFloat{
+
+    0%{
+
+        transform:
+        translateY(0)
+        translateX(0)
+        rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-40px)
+        translateX(30px)
+        rotate(8deg);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0)
+        translateX(0)
+        rotate(0deg);
+
+    }
+
+}

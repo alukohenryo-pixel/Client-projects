@@ -20,20 +20,19 @@ html{
 
 }
 
-body{
-
-    font-family:'Poppins',sans-serif;
-
-    background:var(--background);
-
-    color:var(--black);
-
-    /* position:relative; */
-
-    overflow-x:hidden;
-
+body {
+    
+    font-family: "Poppins", sans-serif;
+    
+    background: #F8F9FD;
+    
+    color: #161616;
+    
+    overflow-x: hidden;
+    
+    position: relative;
+    
 }
-
 img{
 
     display:block;

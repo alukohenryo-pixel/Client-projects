@@ -37,6 +37,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- ===========================
          Font Awesome
@@ -72,6 +74,8 @@
     <link rel="stylesheet" href="assets/css/animations.css">
 
     <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <link rel="stylesheet" href="assets/css/background.css">
 
 </head>
 
@@ -82,6 +86,8 @@
     ============================ -->
 
 <header id="header">
+    
+    <div class="mobile-overlay"></div>
 
     <div class="container">
 
@@ -157,98 +163,114 @@
     <!-- ===========================
          Hero
     ============================ -->
+   <section id="hero">
 
-    <main>
+    <div class="hero-bg-chart">
 
-<section id="hero" class="reveal">
-
-    <!-- Decorative Background -->
-
-    <div class="hero-bg">
-
-        <div class="purple-glow"></div>
-
-        <div class="blue-glow"></div>
-
-        <div class="pink-glow"></div>
+        <img
+            src="assets/images/hero/chart-bg.png"
+            alt="Market Chart">
 
     </div>
 
-    <div class="container hero-wrapper">
+    <div class="container hero-grid">
 
         <!-- LEFT -->
 
         <div class="hero-left">
 
-            <div class="hero-badge">
-
-                <i class="fa-solid fa-shield-halved"></i>
-
-                Trusted Cryptocurrency Exchange
-
-            </div>
-
             <h1>
 
-                Buy & Sell Cryptocurrency
+                Buy, Sell & Trade
 
-                <span>
+                <br>
 
-                    Quickly, Securely &
+                Crypto with
 
-                    At The Best Rates
+                <br>
 
-                </span>
+                <span>Confidence</span>
 
             </h1>
 
             <p>
 
-                Trade Bitcoin, USDT, Ethereum and other cryptocurrencies
-                with confidence. CoinsWise offers fast settlement,
-                competitive rates and dedicated customer support.
+                CoinsWise makes crypto trading simple,
+                fast, and secure for everyone.
 
             </p>
 
             <div class="hero-buttons">
 
-                <a href="#" class="primary-btn">
+                <a href="#rates"
+                   class="btn-primary">
 
-                    Buy Crypto
+                    Get Started
 
                 </a>
 
-                <a href="#" class="secondary-btn">
+                <a href="#rates"
+                   class="btn-outline">
 
-                    Sell Crypto
+                    See Rates
 
                 </a>
 
             </div>
 
-            <div class="hero-trust">
+            <div class="hero-features">
 
-                <div>
+                <div class="feature">
 
-                    <i class="fa-solid fa-lock"></i>
+                    <div class="feature-icon">
 
-                    Secure
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Secure & Trusted</strong>
+
+                        <small>Your funds are 100% safe</small>
+
+                    </div>
 
                 </div>
 
-                <div>
+                <div class="feature">
 
-                    <i class="fa-solid fa-bolt"></i>
+                    <div class="feature-icon">
 
-                    Instant
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Fast Transactions</strong>
+
+                        <small>Quick deposits & withdrawals</small>
+
+                    </div>
 
                 </div>
 
-                <div>
+                <div class="feature">
 
-                    <i class="fa-solid fa-headset"></i>
+                    <div class="feature-icon">
 
-                    24/7 Support
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>24/7 Support</strong>
+
+                        <small>We're here for you always</small>
+
+                    </div>
 
                 </div>
 
@@ -257,72 +279,243 @@
         </div>
 
         <!-- RIGHT -->
+<div class="hero-right">
 
-        <div class="hero-right">
+    <!-- Purple Background -->
 
-            <img
+    <div class="hero-panel">
+        <div class="hero-glow"></div>
 
-                src="assets/images/hero/dashboard-coin.png"
+        <div class="hero-blur hero-blur-1"></div>
 
-                class="dashboard"
+        <div class="hero-blur hero-blur-2"></div>
 
-                alt="CoinsWise Dashboard">
+        <div class="hero-grid-lines"></div>
+    </div>
+
+    <!-- Floating Coins -->
+
+    <img
+        src="assets/images/hero/btc.png"
+        class="coin coin-btc"
+        alt="Bitcoin">
+
+    <img
+        src="assets/images/hero/eth.png"
+        class="coin coin-eth"
+        alt="Ethereum">
+
+    <img
+        src="assets/images/hero/tether.png"
+        class="coin coin-usdt"
+        alt="USDT">
+
+    <!-- Phone -->
+
+    <div class="phone-wrapper">
+
+        <img
+            src="assets/images/hero/phone-frame.png"
+            class="phone-frame"
+            alt="Phone">
+
+        <div class="phone-screen">
+
+            <div class="top-bar">
+
+                <div>
+
+                    <small>Welcome back,</small>
+
+                    <strong> User</strong>
+
+                </div>
+
+                <i class="fa-regular fa-bell"></i>
+
+            </div>
+
+            <div class="wallet-card">
+
+                <small>Total Balance</small>
+
+                <h2 id="portfolio-balance">
+
+                    ₦0
+
+                </h2>
+
+                <span class="profit">
+
+                    +12.5%
+
+                </span>
+
+            </div>
+
+            <div class="quick-actions">
+
+                <div>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>Buy</span>
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                    <span>Sell</span>
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                    <span>Deposit</span>
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-money-bill-wave"></i>
+
+                    <span>Withdraw</span>
+
+                </div>
+
+            </div>
+
+            <div class="asset-list">
+
+                <div class="asset">
+
+                    <img src="assets/images/hero/bitcoin.svg">
+
+                    <div>
+
+                        <strong>Bitcoin</strong>
+
+                        <small id="btc-price">
+
+                            Loading...
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="asset">
+
+                    <img src="assets/images/hero/ethereum.svg">
+
+                    <div>
+
+                        <strong>Ethereum</strong>
+
+                        <small id="eth-price">
+
+                            Loading...
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="asset">
+
+                    <img src="assets/images/hero/tether.svg">
+
+                    <div>
+
+                        <strong>USDT</strong>
+
+                        <small id="usdt-price">
+
+                            Loading...
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
+
+    </div>
+
+</div>
 
     </div>
 
 </section>
+        
+        
         <!-- ===========================
              Live Crypto Rates
         ============================ -->
 
-<section id="rates" class="reveal">
-
-    <div class="rates-card">
-
-        <div class="rates-header">
-
-            <h2>Today's Rates</h2>
-
-            <a href="#">
-
-                View all rates
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
+<section id="rates">
+    
+    <div class="container">
+        
+        <div class="rates-card">
+            
+            <div class="rates-header">
+                
+                <h2>
+                    
+                    Today's Rates
+                    
+                </h2>
+                
+                <a href="#">
+                
+                    View all rates
+                    
+                    <i class="fa-solid fa-arrow-right"></i>
+                    
+                </a>
+                
+            </div>
+            
+            <table>
+                
+                <thead>
+                    
+                    <tr>
+                        
+                        <th>Coin</th>
+                        
+                        <th>Buy (NGN)</th>
+                        
+                        <th>Sell (NGN)</th>
+                        
+                        <th>Change (24H)</th>
+                        
+                        <th>Trade</th>
+                        
+                    </tr>
+                    
+                </thead>
+                
+                <tbody id="rates-body">
+                    
+                </tbody>
+                
+            </table>
+            
         </div>
-
-        <table>
-
-            <thead>
-
-                <tr>
-
-                    <th>Coin</th>
-
-                    <th>Buy (NGN)</th>
-
-                    <th>Sell (NGN)</th>
-
-                    <th>Change (24H)</th>
-
-                    <th>Trade</th>
-
-                </tr>
-
-            </thead>
-
-            <tbody id="rates-body">
-
-            </tbody>
-
-        </table>
-
+        
     </div>
-
+    
 </section>
         <!-- ===========================
              Why Choose CoinsWise
@@ -910,11 +1103,13 @@
          JavaScript
     ============================ -->
 
-    <script src="assets/js/main.js"></script>
+
 
     <script src="assets/js/navigation.js"></script>
 
     <script src="assets/js/rates.js"></script>
+    
+    
 
     <script src="assets/js/statistics.js"></script>
 
