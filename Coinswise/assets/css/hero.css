@@ -6,13 +6,18 @@ HERO
 
 position:relative;
 
-min-height:100vh;
+min-height:950px;
 
 display:flex;
 
 align-items:center;
 
-overflow:hidden;
+
+padding-top:120px;
+
+padding-bottom:220px;   /* important */
+
+overflow:visible;
 
 background:#F8F9FD;
 

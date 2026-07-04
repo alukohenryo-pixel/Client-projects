@@ -1,0 +1,157 @@
+/* ===========================
+   FLOATING RATES CARD
+=========================== */
+
+#rates{
+
+    position:relative;
+
+    margin-top:-140px;
+
+    z-index:20;
+
+}
+
+.rates-card{
+
+    width:min(92%,1400px);
+
+    margin:auto;
+
+    background:#fff;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 30px 90px rgba(21,22,41,.08);
+
+}
+
+.rates-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:36px 38px;
+
+    border-bottom:1px solid #f2f2f2;
+
+}
+
+.rates-header h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+.rates-header a{
+
+    color:#6C3BFF;
+
+    font-weight:600;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead th{
+
+    padding:24px 38px;
+
+    text-align:left;
+
+    color:#666;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+tbody td{
+
+    padding:30px 38px;
+
+    border-bottom:1px solid #F4F4F4;
+
+}
+
+tbody tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+
+.coin-info{
+
+display:flex;
+
+align-items:center;
+
+gap:16px;
+
+}
+
+.coin-info img{
+
+width:42px;
+
+height:42px;
+
+border-radius:50%;
+
+}
+
+.coin-info strong{
+
+display:block;
+
+font-size:18px;
+
+font-weight:600;
+
+color:#161616;
+
+}
+
+.coin-info span{
+
+display:block;
+
+font-size:14px;
+
+color:#777;
+
+margin-top:4px;
+
+}
+
+.green{
+
+color:#18B566;
+
+font-weight:600;
+
+}
+
+.red{
+
+color:#E63946;
+
+font-weight:600;
+
+}
