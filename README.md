@@ -36,7 +36,6 @@ This project follows modern UI/UX principles with a strong emphasis on trust, sp
 - SEO optimized
 - Fully responsive
 - Easy to maintain
-- Reusable architecture for future GBBM projects
 
 ---
 
