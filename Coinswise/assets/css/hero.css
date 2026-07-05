@@ -16,6 +16,71 @@
 
 }
 
+.hero{
+
+min-height:800px;
+
+padding-top:140px;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero-content{
+
+display:grid;
+
+grid-template-columns:
+
+42%
+
+58%;
+
+align-items:center;
+
+column-gap: 90px;
+
+}
+
+
+.hero-title{
+
+font-size:76px;
+
+line-height:.96;
+
+font-weight:800;
+
+letter-spacing:-3px;
+
+}
+
+
+
+.hero-title span{
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#ec4899,
+
+#7c3aed,
+
+#3b82f6);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
 .hero-grid{
 
     display:grid;
@@ -37,6 +102,8 @@
     position:relative;
 
     z-index:5;
+    
+    max-width: 560px;
 
 }
 
@@ -107,9 +174,11 @@
 
     width:210px;
 
-    height:70px;
+    height:62px;
+    
+    padding: 0 38px;
 
-    border-radius:16px;
+    border-radius:18px;
 
     color:#fff;
 
@@ -213,7 +282,9 @@
 
     position:relative;
 
-    min-height:760px;
+    min-height:800px;
+    
+    transform: translateX(40px);
 
 }
 
@@ -223,15 +294,19 @@
 
     position:absolute;
 
-    left:46%;
+    left:230px;
 
-    top:150px;
+    top:250px;
 
     width:520px;
+    
+    height: auto;
 
-    opacity:.35;
+    opacity:.18;
 
-    z-index:1;
+    z-index:2;
+    
+    pointer-events: none;
 
 }
 
@@ -240,6 +315,12 @@
     width:100%;
 
     display:block;
+    
+    height: auto;
+    
+    object-fit: contain;
+    
+    transform: translateX(0);
 
 }
 
@@ -253,7 +334,8 @@ RIGHT HERO
 
     position:relative;
 
-    height:760px;
+    height:960px;
+    
 
 }
 
@@ -265,13 +347,13 @@ RIGHT HERO
 
     right:0;
 
-    top:0;
+    top:55px;
 
     width:520px;
 
-    height:620px;
+    height:960px;
 
-    border-radius:0 0 0 0;
+    border-radius:30px;
 
     background:linear-gradient(
 
@@ -284,6 +366,7 @@ RIGHT HERO
     );
 
     overflow:hidden;
+    
 
 }
 
@@ -311,12 +394,14 @@ RIGHT HERO
 
     position:absolute;
 
-    right:170px;
+    left: -40px;
 
     top:20px;
+    
+    width:360px;
 
-    width:330px;
-
+    height:890px;
+    
     z-index:20;
 
     filter:
@@ -328,7 +413,19 @@ RIGHT HERO
     rgba(0,0,0,.22));
     
     transition: .45s;
+    
+    transform: translateZ(0);
 
+}
+
+.phone-wrapper img {
+    
+    display: block;
+    
+    width: 100%;
+    
+    height: auto;
+    
 }
 
 
@@ -354,19 +451,21 @@ RIGHT HERO
 
     position:absolute;
 
-    top:22px;
+    top:26px;
 
-    left:18px;
+    left:24px;
 
-    width:294px;
+    width:362px;
 
-    height:596px;
+    height:890px;
 
     background:#fff;
 
-    border-radius:34px;
+    border-radius:42px;
 
     padding:24px;
+    
+    overflow: hidden;
 
 }
 
@@ -398,7 +497,7 @@ RIGHT HERO
 
 .wallet-card{
 
-    margin-top:28px;
+    margin-top:38px;
 
 }
 
@@ -512,11 +611,11 @@ RIGHT HERO
 
 .coin-btc{
 
-    width:180px;
+    width:160px;
 
-    right:10px;
+    right:95px;
 
-    top:120px;
+    top:370px;
 
     z-index:5;
 
@@ -524,11 +623,11 @@ RIGHT HERO
 
 .coin-eth{
 
-    width:170px;
+    width:150px;
 
-    right:40px;
+    right:135px;
 
-    top:310px;
+    top:460px;
 
     z-index:4;
 
@@ -536,11 +635,11 @@ RIGHT HERO
 
 .coin-usdt{
 
-    width:165px;
+    width:155px;
 
-    right:-10px;
+    right:55px;
 
-    top:470px;
+    bottom:25px;
 
     z-index:6;
 
@@ -675,4 +774,14 @@ animation-delay:2.4s;
 
     background-size:42px 42px;
 
+}
+
+.container {
+    
+    max-width: 1280px;
+    
+    width: 92%;
+    
+    margin: auto;
+    
 }
