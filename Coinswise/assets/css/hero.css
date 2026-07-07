@@ -288,41 +288,44 @@ color:transparent;
 
 }
 
-/* BACKGROUND CHART */
+/* ==========================================
+   HERO CHART BACKGROUND
+========================================== */
 
-.hero-bg-chart{
+.chart-bg{
 
     position:absolute;
 
+    top:135px;
+
     left:230px;
 
-    top:250px;
+    width:560px;
 
-    width:520px;
-    
-    height: auto;
+    height:auto;
 
     opacity:.18;
 
+    pointer-events:none;
+
     z-index:2;
-    
-    pointer-events: none;
 
 }
 
-.hero-bg-chart img{
+.chart-bg img{
+
+    display:block;
 
     width:100%;
 
-    display:block;
-    
-    height: auto;
-    
-    object-fit: contain;
-    
-    transform: translateX(0);
+    height:auto;
+
+    object-fit:contain;
+
+    transform:translateX(0);
 
 }
+
 
 
 
@@ -398,9 +401,9 @@ RIGHT HERO
 
     top:20px;
     
-    width:360px;
+    width:340px;
 
-    height:890px;
+    height:920px;
     
     z-index:20;
 
@@ -457,7 +460,7 @@ RIGHT HERO
 
     width:362px;
 
-    height:890px;
+    height:900px;
 
     background:#fff;
 
@@ -785,3 +788,5 @@ animation-delay:2.4s;
     margin: auto;
     
 }
+
+

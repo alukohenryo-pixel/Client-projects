@@ -207,12 +207,20 @@
 .whatsapp-btn{
 
     background:#25D366;
+    
+    width:210px;
+
+    height:62px;
 
 }
 
 .telegram-btn{
 
     background:#229ED9;
+    
+    width:210px;
+
+    height:62px;
 
 }
 
