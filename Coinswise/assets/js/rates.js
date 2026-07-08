@@ -126,7 +126,7 @@ ${percentageValue(coin.price_change_percentage_24h)}
 
 <a
 
-href="https://wa.me/234XXXXXXXXXX"
+href="https://wa.me/2348084382070"
 
 target="_blank"
 

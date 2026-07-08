@@ -78,9 +78,9 @@
 }
 
 .logo img{
-    padding: 0;
+
     width:auto;
-    height:110px;      /* Increase to 72px or 80px if needed */
+    height:170px;      /* Increase to 72px or 80px if needed */
     display:block;
     object-fit:contain;
 }
