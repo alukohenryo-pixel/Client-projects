@@ -194,3 +194,15 @@ td {
     color: #fff;
     
 }
+
+tbody tr{
+
+    transition:.25s;
+
+}
+
+tbody tr:hover{
+
+    background:#FAF7FF;
+
+}

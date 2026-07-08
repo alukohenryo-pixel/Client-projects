@@ -78,6 +78,7 @@ rotate(0deg);
 
 }
 
+
 .btn-primary{
 
 transition:.35s;
@@ -86,74 +87,118 @@ transition:.35s;
 
 .btn-primary:hover{
 
-transform:
+    transform:translateY(-3px);
 
-translateY(-4px);
-
-box-shadow:
-
-0 25px 60px
-
-rgba(124,58,237,.32);
+    box-shadow:
+        0 18px 45px rgba(124,58,237,.35);
 
 }
 
-.hero-left {
-  
-  animation:
-  
-    fadeLeft 1s ease;
-  
+.btn-outline:hover{
+
+    background:var(--hero-primary);
+
+    color:#fff;
+
 }
 
-.hero-right {
-  
-  animation:
-  
-    fadeRight 1s ease;
-  
+
+
+.hero-left{
+
+    animation:fadeLeft .8s ease;
+
 }
 
-@keyframes fadeLeft {
-  
-  from {
-    
-    opacity: 0;
-    
-    transform:
-    
-      translateX(-45px);
-    
-  }
-  
-  to {
-    
-    opacity: 1;
-    
-    transform: none;
-    
-  }
-  
+.hero-right{
+
+    animation:fadeRight .8s ease;
+
 }
 
-@keyframes fadeRight {
-  
-  from {
-    
-    opacity: 0;
-    
-    transform:
-    
-      translateX(45px);
-    
-  }
-  
-  to {
-    
-    opacity: 1;
-    
-    transform: none;
-    
-  }
-  
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+        transform:translateX(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:none;
+
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+        transform:translateX(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:none;
+
+    }
+
+}
+
+
+.coin{
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+.float-btn{
+
+    animation:pulse 2.5s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 0 0 rgba(108,59,255,.35);
+
+}
+
+70%{
+
+box-shadow:0 0 0 18px rgba(108,59,255,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 0 rgba(108,59,255,0);
+
+}
+
 }

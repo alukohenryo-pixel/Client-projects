@@ -4,7 +4,7 @@
 
 #why-us{
 
-    padding:120px 0;
+    padding:110px 0;
 
     background:#fff;
 
@@ -149,7 +149,7 @@
 
 #how-it-works{
 
-    padding:120px 0;
+    padding:110px 0;
 
     background:#F8F9FD;
 
@@ -280,100 +280,132 @@
 }
 
 
-/* =====================================
+
+/*====================================
 STATISTICS
-===================================== */
+====================================*/
 
 #statistics{
-
-    padding:130px 0;
-
-    background:#F8F9FD;
-
+    margin-top:-70px;
+    position:relative;
+    z-index:20;
 }
 
-.stats-grid{
+.stats-wrapper{
 
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
+    gap:40px;
 
-    gap:30px;
+    align-items:center;
 
-    margin-top:70px;
+    background:#120322;
 
+    border-radius:22px;
+
+    padding:35px 45px;
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.25);
 }
 
-.stat-card{
-
-    background:#FFFFFF;
-
-    border-radius:28px;
-
-    padding:45px 30px;
-
-    text-align:center;
-
-    box-shadow:0 20px 60px rgba(15,23,42,.06);
-
-    transition:.35s ease;
-
-}
-
-.stat-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 30px 80px rgba(15,23,42,.10);
-
-}
-
-.stat-icon{
-
-    width:85px;
-
-    height:85px;
-
-    margin:auto;
-
-    margin-bottom:25px;
-
-    border-radius:50%;
+.stat-item{
 
     display:flex;
 
     align-items:center;
 
+    gap:18px;
+
+    color:#fff;
+}
+
+.stat-item h3{
+
+    font-size:2rem;
+
+    margin-bottom:4px;
+
+    color:#fff;
+}
+
+.stat-item span{
+
+    color:rgba(255,255,255,.75);
+
+    font-size:.95rem;
+}
+
+.stat-icon{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:18px;
+
+    display:flex;
+
     justify-content:center;
 
-    background:linear-gradient(135deg,#6C3BFF,#00C2FF);
+    align-items:center;
 
-    color:white;
+    font-size:26px;
 
-    font-size:32px;
+    flex-shrink:0;
+}
+
+.purple{
+
+    background:rgba(126,87,255,.18);
+
+    color:#8b5cf6;
+}
+
+.pink{
+
+    background:rgba(236,72,153,.18);
+
+    color:#ec4899;
+}
+
+.blue{
+
+    background:rgba(59,130,246,.18);
+
+    color:#3b82f6;
+}
+
+.orange{
+
+    background:rgba(251,146,60,.18);
+
+    color:#fb923c;
+}
+
+@media(max-width:992px){
+
+.stats-wrapper{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:30px;
 
 }
 
-.stat-card h3{
+}
 
-    font-size:44px;
+@media(max-width:640px){
 
-    font-weight:700;
+.stats-wrapper{
 
-    color:#161616;
+grid-template-columns:1fr;
 
-    margin-bottom:10px;
+padding:30px 25px;
 
 }
 
-.stat-card span{
-
-    color:#666;
-
-    font-size:16px;
-
 }
-
 
 /* ==========================================
 TESTIMONIALS
@@ -381,7 +413,7 @@ TESTIMONIALS
 
 #testimonials{
 
-    padding:130px 0;
+    padding:120px 0;
 
     background:#FFFFFF;
 
@@ -512,5 +544,111 @@ TESTIMONIALS
 .slider-btn:hover{
 
     transform:scale(1.08);
+
+}
+
+#faq{
+    padding:120px 0;
+    background:#fff;
+}
+
+.faq-wrapper{
+    max-width:850px;
+    margin:auto;
+}
+
+.faq-item{
+    border:1px solid #ececec;
+    border-radius:18px;
+    margin-bottom:18px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.faq-question{
+    width:100%;
+    border:none;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:28px 35px;
+    font-size:19px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.faq-answer p{
+    padding:0 35px 28px;
+    color:#6B7280;
+    line-height:1.8;
+}
+
+.faq-item.active .faq-answer{
+    max-height:220px;
+}
+
+.faq-item.active{
+    border-color:#6C3BFF;
+}
+
+
+#cta{
+
+padding:120px 0;
+
+}
+
+.cta-box{
+
+background:linear-gradient(135deg,#6C3BFF,#18073E);
+
+padding:90px;
+
+border-radius:35px;
+
+text-align:center;
+
+color:#fff;
+
+box-shadow:0 40px 80px rgba(108,59,255,.25);
+
+}
+
+.cta-box h2{
+
+font-size:48px;
+
+margin-bottom:20px;
+
+}
+
+.cta-box p{
+
+max-width:650px;
+
+margin:auto;
+
+line-height:1.8;
+
+opacity:.9;
+
+margin-bottom:40px;
+
+}
+
+.cta-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
 
 }

@@ -66,34 +66,36 @@
 
 }
 
-/* ==========================================
-   LOGO
-========================================== */
+/* ==========================
+   Navigation Logo
+========================== */
 
 .logo{
-
     display:flex;
-
     align-items:center;
-
-    font-size:2rem;
-
-    font-weight:700;
-
-    text-decoration:none;
-
-    color:#151515;
-
-    white-space:nowrap;
-
+    justify-content:flex-start;
+    flex-shrink:0;
 }
 
-.logo span{
-
-    color:#6C3BFF;
-
+.logo img{
+    padding: 0;
+    width:auto;
+    height:110px;      /* Increase to 72px or 80px if needed */
+    display:block;
+    object-fit:contain;
 }
 
+.logo:hover .logo-img {
+    transform: scale(1.03);
+}
+
+@media (max-width:768px){
+
+    .logo img{
+        height:84px;
+    }
+
+}
 /* ==========================================
    DESKTOP MENU
 ========================================== */

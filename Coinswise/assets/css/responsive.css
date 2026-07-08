@@ -264,3 +264,25 @@ display:none;
   }
   
 }
+
+@media (max-width:768px){
+
+.floating-social{
+
+    right:18px;
+
+    bottom:22px;
+
+}
+
+.float-btn{
+
+    width:55px;
+
+    height:55px;
+
+    font-size:26px;
+
+}
+
+}

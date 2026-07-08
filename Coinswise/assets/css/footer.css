@@ -1,0 +1,157 @@
+footer{
+
+background:#111827;
+
+color:#fff;
+
+padding-top:90px;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr 1fr;
+
+gap:60px;
+
+padding-bottom:60px;
+
+}
+
+.footer-grid h4{
+
+margin-bottom:20px;
+
+}
+
+.footer-grid a{
+
+display:block;
+
+color:#cbd5e1;
+
+text-decoration:none;
+
+margin-bottom:14px;
+
+transition:.3s;
+
+}
+
+.footer-grid a:hover{
+
+color:#fff;
+
+}
+
+.footer-social{
+
+display:flex;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.footer-social a{
+
+width:45px;
+
+height:45px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+background:#6C3BFF;
+
+color:#fff;
+
+}
+
+.copyright{
+
+border-top:1px solid rgba(255,255,255,.08);
+
+padding:25px;
+
+text-align:center;
+
+color:#94A3B8;
+
+}
+
+
+/*=================================================
+FLOATING SOCIAL
+=================================================*/
+
+.floating-social{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    z-index:9999;
+
+}
+
+.float-btn{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:30px;
+
+    text-decoration:none;
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.18);
+
+    transition:.3s ease;
+
+}
+
+.float-btn:hover{
+
+    transform:translateY(-6px) scale(1.08);
+
+}
+
+.whatsapp{
+
+    background:#25D366;
+
+}
+
+.telegram{
+
+    background:#229ED9;
+
+}
