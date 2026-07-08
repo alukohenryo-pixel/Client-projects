@@ -3,14 +3,14 @@
    Developed by GBBM Digital Solutions
 ========================================================== */
 
-#rates {
-    
-    position: relative;
-    
-    margin-top: -310px;
-    
-    z-index: 80;
-    
+#rates{
+
+    position:relative;
+
+    margin-top:-320px;
+
+    z-index:100;
+
 }
 
 .rates-card {

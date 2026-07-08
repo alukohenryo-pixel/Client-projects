@@ -184,7 +184,7 @@
 
 .nav-actions a{
 
-    width:46px;
+    width:120px;
 
     height:46px;
 
@@ -194,7 +194,7 @@
 
     align-items:center;
 
-    border-radius:50%;
+    border-radius:10px;
 
     text-decoration:none;
 
@@ -207,20 +207,13 @@
 .whatsapp-btn{
 
     background:#25D366;
-    
-    width:210px;
 
-    height:62px;
 
 }
 
 .telegram-btn{
 
     background:#229ED9;
-    
-    width:210px;
-
-    height:62px;
 
 }
 
