@@ -1,287 +1,420 @@
-@media(max-width:992px){
+/* ==========================================================
+   RESPONSIVE
+   Developed by GBBM Digital Solutions
+========================================================== */
 
-.nav-links,
+/* ==========================================
+   Large Laptops
+========================================== */
 
-.nav-buttons{
+@media (max-width:1200px){
 
-display:none;
+.container{
+    width:min(95%,1200px);
+}
+
+.hero-grid{
+    gap:60px;
+}
+
+.hero-left h1{
+    font-size:58px;
+}
+
+.phone-wrapper{
+    transform:scale(.92);
+}
+
+.stats-wrapper{
+    gap:30px;
+}
 
 }
 
-.menu-toggle{
+/* ==========================================
+   Tablets
+========================================== */
 
-display:block;
+@media (max-width:992px){
+
+/* Header */
+
+.hamburger{
+    display:flex;
+}
+
+.nav-actions{
+    display:none;
+}
+
+.nav-menu{
+
+    position:fixed;
+
+    top:82px;
+
+    right:-100%;
+
+    width:300px;
+
+    height:calc(100vh - 82px);
+
+    background:#fff;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    padding:40px 30px;
+
+    gap:24px;
+
+    transition:.35s ease;
+
+    box-shadow:-12px 0 35px rgba(0,0,0,.08);
+
+    z-index:999;
 
 }
 
+.nav-menu.active{
+    right:0;
 }
 
-@media(max-width:992px){
+/* Hero */
 
-.hero-container{
+.hero-grid{
 
-flex-direction:column;
+    grid-template-columns:1fr;
 
-text-align:center;
+    gap:70px;
 
 }
 
-.hero-content h1{
+.hero-left{
 
-font-size:42px;
+    text-align:center;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.hero-left p{
+
+    margin-inline:auto;
 
 }
 
 .hero-buttons{
 
-justify-content:center;
+    justify-content:center;
 
 }
 
-.trust-items{
+.hero-features{
 
-justify-content:center;
+    grid-template-columns:1fr;
 
-}
+    max-width:500px;
 
-}
-
-@media(max-width:992px){
-
-.features-grid{
-
-grid-template-columns:repeat(2,1fr);
+    margin:40px auto 0;
 
 }
 
-}
+.hero-right{
 
-@media(max-width:768px){
+    display:flex;
 
-.features-grid{
-
-grid-template-columns:1fr;
+    justify-content:center;
 
 }
 
-.section-title h2{
+.hero-panel{
 
-font-size:36px;
+    width:100%;
 
-}
+    max-width:620px;
 
-}
-
-
-@media(max-width:992px){
-
-.steps-wrapper{
-
-grid-template-columns:1fr;
+    height:700px;
 
 }
 
-.step-arrow{
+.phone-wrapper{
 
-display:none;
-
-}
-
-.step-card{
-
-margin-bottom:40px;
+    transform:scale(.9);
 
 }
 
-}
+/* Rates */
 
+.rates-header{
 
+    flex-direction:column;
 
-@media(max-width:992px){
+    gap:15px;
 
-.stats-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
+    text-align:center;
 
 }
 
-@media(max-width:768px){
+.rates-card{
 
-.stats-grid{
-
-grid-template-columns:1fr;
+    overflow-x:auto;
 
 }
 
-}
+/* Statistics */
 
+.stats-wrapper{
 
+    grid-template-columns:repeat(2,1fr);
 
-@media(max-width:992px){
-
-.testimonial-track{
-
-grid-template-columns:1fr;
+    gap:30px;
 
 }
 
-.slider-btn{
+/* Services */
 
-display:none;
+.services-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+/* FAQ */
+
+.faq-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+/* Footer */
+
+.footer-grid{
+
+    grid-template-columns:repeat(2,1fr);
 
 }
 
 }
 
-
-@media(max-width:992px) {
-  
-  .hero-container {
-    
-    grid-template-columns: 1fr;
-    
-    text-align: center;
-    
-  }
-  
-  .hero-content {
-    
-    order: 1;
-    
-  }
-  
-  .hero-dashboard {
-    
-    order: 2;
-    
-    margin-top: 60px;
-    
-  }
-  
-  .hero-buttons {
-    
-    justify-content: center;
-    
-  }
-  
-  .hero-features {
-    
-    justify-content: center;
-    
-  }
-  
-  .hero-content h1 {
-    
-    font-size: 48px;
-    
-  }
-  
-}
-
-@media(max-width:576px) {
-  
-  .hero-content h1 {
-    
-    font-size: 36px;
-    
-  }
-  
-  .hero-buttons {
-    
-    flex-direction: column;
-    
-  }
-  
-  .primary-btn,
-  
-  .secondary-btn {
-    
-    width: 100%;
-    
-    text-align: center;
-    
-  }
-  
-}
-
-
-@media(max-width:992px) {
-  
-  .dashboard-card {
-    
-    width: 100%;
-    
-    max-width: 460px;
-    
-  }
-  
-  .notification-card {
-    
-    position: relative;
-    
-    left: 0;
-    
-    bottom: 0;
-    
-    margin-top: 30px;
-    
-  }
-  
-  .floating-coin {
-    
-    width: 50px;
-    
-  }
-  
-}
-
-@media(max-width:576px) {
-  
-  .dashboard-card {
-    
-    padding: 25px;
-    
-  }
-  
-  .dashboard-header h2 {
-    
-    font-size: 28px;
-    
-  }
-  
-  .chart-area {
-    
-    height: 160px;
-    
-  }
-  
-  .notification-card {
-    
-    padding: 15px;
-    
-  }
-  
-}
+/* ==========================================
+   Mobile
+========================================== */
 
 @media (max-width:768px){
+
+.hero{
+
+    padding-top:120px;
+
+}
+
+.hero-left h1{
+
+    font-size:44px;
+
+    line-height:1.15;
+
+}
+
+.hero-left p{
+
+    font-size:16px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    width:100%;
+
+}
+
+.hero-buttons a{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+.hero-right{
+
+    min-height:650px;
+
+}
+
+.hero-panel{
+
+    height:620px;
+
+    border-radius:34px;
+
+}
+
+.phone-wrapper{
+
+    transform:scale(.75);
+
+}
+
+.coin{
+
+    width:58px;
+
+}
+
+.coin-btc{
+
+    top:30px;
+
+}
+
+.coin-eth{
+
+    right:20px;
+
+}
+
+.coin-usdt{
+
+    bottom:40px;
+
+}
+
+.stats-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.services-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+table{
+
+    min-width:700px;
+
+}
+
+}
+
+/* ==========================================
+   Small Phones
+========================================== */
+
+@media (max-width:576px){
+
+.container{
+
+    width:92%;
+
+}
+
+.logo-img{
+
+    height:52px;
+
+}
+
+.hero-left h1{
+
+    font-size:36px;
+
+}
+
+.hero-left p{
+
+    font-size:15px;
+
+}
+
+.hero-panel{
+
+    height:560px;
+
+}
+
+.phone-wrapper{
+
+    transform:scale(.63);
+
+}
+
+.rates-header{
+
+    padding:25px;
+
+}
+
+th,
+td{
+
+    padding:18px;
+
+}
 
 .floating-social{
 
     right:18px;
 
-    bottom:22px;
+    bottom:18px;
 
 }
 
 .float-btn{
 
-    width:55px;
+    width:56px;
 
-    height:55px;
+    height:56px;
 
-    font-size:26px;
+    font-size:24px;
+
+}
+
+}
+
+/* ==========================================
+   Very Small Devices
+========================================== */
+
+@media (max-width:400px){
+
+.hero-left h1{
+
+    font-size:32px;
+
+}
+
+.phone-wrapper{
+
+    transform:scale(.56);
+
+}
+
+.hero-panel{
+
+    height:520px;
+
+}
+
+.coin{
+
+    width:48px;
 
 }
 
