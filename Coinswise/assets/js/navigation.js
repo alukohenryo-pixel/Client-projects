@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const header = document.getElementById("header");
     
-    const menuToggle = document.querySelector(".menu-toggle");
+    const menuToggle = document.querySelector(".hamburger");
     
-    const mobileMenu = document.querySelector(".mobile-menu");
+    const mobileMenu = document.querySelector(".nav-menu");
     
     const mobileOverlay = document.querySelector(".mobile-overlay");
     
-    const mobileLinks = document.querySelectorAll(".mobile-menu a");
+    const mobileLinks = document.querySelectorAll(".nav-menu a");
     
     /* ==========================================
        Sticky Header

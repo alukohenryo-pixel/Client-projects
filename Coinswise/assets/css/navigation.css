@@ -3,89 +3,102 @@
    CoinsWise
    Developed by GBBM Digital Solutions
 ========================================================== */
-
-/* ==========================================
-   HEADER
-========================================== */
+/*==============================
+HEADER
+==============================*/
 
 #header{
-
     position:fixed;
-
     top:0;
-
     left:0;
-
     width:100%;
-
-    height:90px;
-
-    display:flex;
-
-    align-items:center;
-
+    height:82px;
+    background:#fff;
     z-index:1000;
-
-    transition:all .35s ease;
-
-    background:transparent;
-
+    box-shadow:0 10px 35px rgba(0,0,0,.05);
 }
+
+#header .container{
+    height:100%;
+}
+
+
 
 #header.scrolled{
 
-    height:74px;
-
-    background:rgba(255,255,255,.88);
-
-    backdrop-filter:blur(20px);
-
-    -webkit-backdrop-filter:blur(20px);
-
-    box-shadow:0 10px 35px rgba(15,23,42,.08);
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
 
 }
 
-/* ==========================================
-   NAVBAR
-========================================== */
+
+/*==============================
+NAVBAR
+==============================*/
 
 .navbar{
-
-    width:100%;
 
     height:100%;
 
     display:flex;
 
-    justify-content:space-between;
-
     align-items:center;
 
-    gap:40px;
+    justify-content:space-between;
+
+    gap:30px;
 
 }
 
-/* ==========================
-   Navigation Logo
-========================== */
 
+/*==============================
+LOGO
+==============================*/
+
+/* .logo{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.logo-img{
+
+    height:58px;
+
+    width:auto;
+
+    display:block;
+
+    object-fit:contain;
+
+    transition:.3s;
+
+} */
 .logo{
     display:flex;
     align-items:center;
-    justify-content:flex-start;
-    flex:0 0 auto;
+    flex-shrink:0;
 }
 
-.logo img{
+.logo-img{
+    height:170px;
+    width:auto;
     display:block;
-    width:170px;
-    height:auto;
-    max-width:none;
+    object-fit:contain;
 }
-/* ==========================================
-   DESKTOP MENU
-========================================== */
+.logo:hover .logo-img{
+
+    transform:scale(1.03);
+
+}
+
+
+/*==============================
+MENU
+==============================*/
 
 .nav-menu{
 
@@ -93,7 +106,7 @@
 
     align-items:center;
 
-    gap:36px;
+    gap:34px;
 
     list-style:none;
 
@@ -103,31 +116,35 @@
 
 }
 
-.nav-link{
+.nav-menu a{
 
-    position:relative;
-
-    text-decoration:none;
-
-    color:#555;
+    color:#3E3E63;
 
     font-size:15px;
 
     font-weight:600;
 
-    transition:color .3s ease;
+    text-decoration:none;
+
+    /* position:relative; */
+
+    transition:.25s;
 
 }
 
-.nav-link:hover,
+.nav-menu a:hover{
 
-.nav-link.active{
-
-    color:#6C3BFF;
+    color:var(--hero-primary);
 
 }
 
-.nav-link::after{
+.nav-menu a.active{
+
+    color:var(--hero-primary);
+
+}
+
+.nav-menu a::after{
 
     content:"";
 
@@ -141,25 +158,28 @@
 
     height:2px;
 
-    border-radius:20px;
+    background:linear-gradient(
+        90deg,
+        #FF43AE,
+        #6C3BFF
+    );
 
-    background:#6C3BFF;
-
-    transition:width .3s ease;
+    transition:.3s;
 
 }
 
-.nav-link:hover::after,
+.nav-menu a:hover::after,
 
-.nav-link.active::after{
+.nav-menu a.active::after{
 
     width:100%;
 
 }
 
-/* ==========================================
-   ACTION BUTTONS
-========================================== */
+
+/*==============================
+BUTTONS
+==============================*/
 
 .nav-actions{
 
@@ -171,32 +191,35 @@
 
 }
 
-.nav-actions a{
+.nav-actions .btn{
 
-    width:120px;
+    height:42px;
 
-    height:46px;
+    padding:0 18px;
+
+    border-radius:12px;
 
     display:flex;
 
-    justify-content:center;
-
     align-items:center;
 
-    border-radius:10px;
+    gap:8px;
 
-    text-decoration:none;
+    font-size:14px;
+
+    font-weight:600;
 
     color:#fff;
 
-    transition:.3s ease;
+    text-decoration:none;
+
+    transition:.25s;
 
 }
 
 .whatsapp-btn{
 
     background:#25D366;
-
 
 }
 
@@ -206,77 +229,74 @@
 
 }
 
-.nav-actions a:hover{
+.nav-actions .btn:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 
-    box-shadow:0 12px 30px rgba(0,0,0,.15);
+    box-shadow:0 10px 24px rgba(0,0,0,.15);
 
 }
 
-/* ==========================================
-   MOBILE TOGGLE
-========================================== */
 
-.menu-toggle{
+/*==============================
+HAMBURGER
+==============================*/
 
-    display:none;
+.hamburger{
 
-    width:48px;
-
-    height:48px;
+    width:44px;
+    height:44px;
 
     border:none;
-
-    background:transparent;
+    background:none;
 
     cursor:pointer;
 
-    position:relative;
+    font-size:22px;
 
-    z-index:1101;
+    display:none;
 
 }
 
-.menu-toggle span{
+/*==============================
+SCROLL SPACING
+==============================*/
 
-    display:block;
+body{
 
-    width:28px;
+    padding-top:88px;
 
-    height:3px;
+}
 
-    margin:6px auto;
+@media (max-width:992px){
 
-    border-radius:20px;
+.nav-menu{
 
-    background:#161616;
+    position:fixed;
+    top:0;
+    right:-100%;
+
+    width:300px;
+    height:100vh;
+
+    background:#fff;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:30px;
 
     transition:.35s ease;
 
-}
-
-.menu-toggle.active span:nth-child(1){
-
-    transform:translateY(9px) rotate(45deg);
+    z-index:999;
 
 }
 
-.menu-toggle.active span:nth-child(2){
+.nav-menu.active{
 
-    opacity:0;
-
-}
-
-.menu-toggle.active span:nth-child(3){
-
-    transform:translateY(-9px) rotate(-45deg);
+    right:0;
 
 }
-
-/* ==========================================
-   MOBILE OVERLAY
-========================================== */
 
 .mobile-overlay{
 
@@ -290,7 +310,7 @@
 
     visibility:hidden;
 
-    transition:.3s ease;
+    transition:.3s;
 
     z-index:998;
 
@@ -304,194 +324,32 @@
 
 }
 
-/* ==========================================
-   MOBILE MENU
-========================================== */
+.nav-actions{
 
-.mobile-menu{
-
-    position:fixed;
-
-    top:0;
-
-    right:-100%;
-
-    width:320px;
-
-    max-width:90%;
-
-    height:100vh;
-
-    background:#fff;
-
-    padding:120px 35px 40px;
-
-    overflow-y:auto;
-
-    -webkit-overflow-scrolling:touch;
-
-    transition:right .35s ease;
-
-    box-shadow:-20px 0 50px rgba(15,23,42,.12);
-
-    z-index:999;
+    display:none;
 
 }
 
-.mobile-menu.active{
-
-    right:0;
-
-}
-
-.mobile-menu ul{
-
-    list-style:none;
-
-    margin:0;
-
-    padding:0;
-
-}
-
-.mobile-menu li{
-
-    margin-bottom:22px;
-
-}
-
-.mobile-menu a{
-
-    display:block;
-
-    font-size:18px;
-
-    font-weight:600;
-
-    color:#161616;
-
-    text-decoration:none;
-
-    transition:.3s ease;
-
-}
-
-.mobile-menu a:hover{
-
-    color:#6C3BFF;
-
-}
-
-.mobile-buttons{
-
-    display:grid;
-
-    gap:15px;
-
-    margin-top:40px;
-
-}
-
-.mobile-buttons a{
+.hamburger{
 
     display:flex;
 
-    justify-content:center;
-
     align-items:center;
 
-    padding:16px;
-
-    border-radius:14px;
-
-    color:#fff;
-
-    font-weight:600;
-
-    text-decoration:none;
+    justify-content:center;
 
 }
 
-/* ==========================================
-   BODY LOCK
-========================================== */
+.logo-img{
+
+    height:50px;
+
+}
+
+}
 
 body.menu-open{
 
     overflow:hidden;
-
-}
-
-/* ==========================================
-   RESPONSIVE
-========================================== */
-
-@media (max-width:992px){
-
-    .nav-menu{
-
-        display:none;
-
-    }
-
-    .nav-actions{
-
-        display:none;
-
-    }
-
-    .menu-toggle{
-
-        display:block;
-
-    }
-
-}
-
-@media (max-width:768px){
-
-    #header{
-
-        height:80px;
-
-    }
-
-    #header.scrolled{
-
-        height:68px;
-
-    }
-
-    .logo{
-
-        font-size:1.7rem;
-
-    }
-
-    .mobile-menu{
-
-        width:100%;
-
-        max-width:100%;
-
-        padding:100px 30px 40px;
-
-    }
-
-}
-
-@media (max-width:480px){
-
-    .logo{
-
-        font-size:1.5rem;
-
-    }
-
-    .mobile-menu a{
-
-        font-size:17px;
-
-    }
 
 }
