@@ -1,16 +1,17 @@
 /* ==========================================================
    RESPONSIVE
-   Developed by GBBM Digital Solutions
+   CoinsWise
+   Production Version
 ========================================================== */
 
-/* ==========================================
-   Large Laptops
-========================================== */
+/* ===========================
+   ≤ 1200px
+=========================== */
 
 @media (max-width:1200px){
 
 .container{
-    width:min(95%,1200px);
+    width:min(94%,1200px);
 }
 
 .hero-grid{
@@ -18,60 +19,73 @@
 }
 
 .hero-left h1{
-    font-size:58px;
+    font-size:3.4rem;
 }
 
 .phone-wrapper{
     transform:scale(.92);
 }
 
-.stats-wrapper{
-    gap:30px;
 }
 
-}
-
-/* ==========================================
-   Tablets
-========================================== */
+/* ===========================
+   ≤ 992px
+=========================== */
 
 @media (max-width:992px){
 
-/* Header */
+body{
+    overflow-x:hidden;
+}
 
-.hamburger{
-    display:flex;
+/* ---------- Header ---------- */
+
+.navbar{
+    height:80px;
+}
+
+.logo-img{
+    height:52px;
+    width:auto;
 }
 
 .nav-actions{
     display:none;
 }
 
+.hamburger{
+    display:flex;
+}
+
 .nav-menu{
 
     position:fixed;
 
-    top:82px;
+    top:80px;
 
     right:-100%;
 
-    width:300px;
+    width:280px;
 
-    height:calc(100vh - 82px);
+    height:calc(100vh - 80px);
 
     background:#fff;
+
+    display:flex;
 
     flex-direction:column;
 
     align-items:flex-start;
 
+    justify-content:flex-start;
+
     padding:40px 30px;
 
-    gap:24px;
+    gap:22px;
 
-    transition:.35s ease;
+    transition:.35s;
 
-    box-shadow:-12px 0 35px rgba(0,0,0,.08);
+    box-shadow:-10px 0 40px rgba(0,0,0,.08);
 
     z-index:999;
 
@@ -81,7 +95,7 @@
     right:0;
 }
 
-/* Hero */
+/* ---------- Hero ---------- */
 
 .hero-grid{
 
@@ -115,11 +129,9 @@
 
 .hero-features{
 
-    grid-template-columns:1fr;
+    max-width:520px;
 
-    max-width:500px;
-
-    margin:40px auto 0;
+    margin:35px auto 0;
 
 }
 
@@ -135,7 +147,7 @@
 
     width:100%;
 
-    max-width:620px;
+    max-width:600px;
 
     height:700px;
 
@@ -143,69 +155,53 @@
 
 .phone-wrapper{
 
-    transform:scale(.9);
+    transform:scale(.88);
 
 }
 
-/* Rates */
+/* ---------- Sections ---------- */
 
-.rates-header{
+.services-grid{
 
-    flex-direction:column;
+grid-template-columns:repeat(2,1fr);
 
-    gap:15px;
+}
 
-    text-align:center;
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.footer-grid{
+
+grid-template-columns:repeat(2,1fr);
 
 }
 
 .rates-card{
 
-    overflow-x:auto;
+overflow-x:auto;
 
 }
 
-/* Statistics */
+table{
 
-.stats-wrapper{
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:30px;
-
-}
-
-/* Services */
-
-.services-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-/* FAQ */
-
-.faq-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-/* Footer */
-
-.footer-grid{
-
-    grid-template-columns:repeat(2,1fr);
+min-width:760px;
 
 }
 
 }
 
-/* ==========================================
-   Mobile
-========================================== */
+/* ===========================
+   ≤ 768px
+=========================== */
 
 @media (max-width:768px){
+
+.container{
+    width:92%;
+}
 
 .hero{
 
@@ -215,9 +211,9 @@
 
 .hero-left h1{
 
-    font-size:44px;
+    font-size:2.8rem;
 
-    line-height:1.15;
+    line-height:1.1;
 
 }
 
@@ -231,7 +227,7 @@
 
     flex-direction:column;
 
-    width:100%;
+    gap:16px;
 
 }
 
@@ -243,9 +239,9 @@
 
 }
 
-.hero-right{
+.hero-features{
 
-    min-height:650px;
+    grid-template-columns:1fr;
 
 }
 
@@ -253,168 +249,708 @@
 
     height:620px;
 
-    border-radius:34px;
+    border-radius:32px;
 
 }
 
 .phone-wrapper{
 
-    transform:scale(.75);
+    transform:scale(.76);
 
 }
 
 .coin{
 
-    width:58px;
+    width:62px;
 
 }
 
-.coin-btc{
+.services-grid,
 
-    top:30px;
-
-}
-
-.coin-eth{
-
-    right:20px;
-
-}
-
-.coin-usdt{
-
-    bottom:40px;
-
-}
-
-.stats-wrapper{
-
-    grid-template-columns:1fr;
-
-}
-
-.services-grid{
-
-    grid-template-columns:1fr;
-
-}
+.stats-grid,
 
 .footer-grid{
 
-    grid-template-columns:1fr;
-
-}
-
-table{
-
-    min-width:700px;
-
-}
-
-}
-
-/* ==========================================
-   Small Phones
-========================================== */
-
-@media (max-width:576px){
-
-.container{
-
-    width:92%;
-
-}
-
-.logo-img{
-
-    height:52px;
-
-}
-
-.hero-left h1{
-
-    font-size:36px;
-
-}
-
-.hero-left p{
-
-    font-size:15px;
-
-}
-
-.hero-panel{
-
-    height:560px;
-
-}
-
-.phone-wrapper{
-
-    transform:scale(.63);
-
-}
-
-.rates-header{
-
-    padding:25px;
-
-}
-
-th,
-td{
-
-    padding:18px;
+grid-template-columns:1fr;
 
 }
 
 .floating-social{
 
-    right:18px;
+right:20px;
 
-    bottom:18px;
-
-}
-
-.float-btn{
-
-    width:56px;
-
-    height:56px;
-
-    font-size:24px;
+bottom:20px;
 
 }
 
 }
 
-/* ==========================================
-   Very Small Devices
-========================================== */
+/* ===========================
+   ≤ 576px
+=========================== */
 
-@media (max-width:400px){
+@media (max-width:576px){
+
+.logo-img{
+
+height:46px;
+
+}
 
 .hero-left h1{
 
-    font-size:32px;
+font-size:2.3rem;
 
 }
 
-.phone-wrapper{
+.hero-left p{
 
-    transform:scale(.56);
+font-size:15px;
 
 }
 
 .hero-panel{
 
-    height:520px;
+height:560px;
+
+}
+
+.phone-wrapper{
+
+transform:scale(.64);
 
 }
 
 .coin{
 
-    width:48px;
+width:52px;
+
+}
+
+.coin-btc{
+
+top:18px;
+
+left:10px;
+
+}
+
+.coin-eth{
+
+right:-10px;
+
+}
+
+.coin-usdt{
+
+bottom:10px;
+
+right:10px;
+
+}
+
+.float-btn{
+
+width:56px;
+
+height:56px;
+
+}
+
+}
+
+/* ===========================
+   ≤ 390px
+=========================== */
+
+@media (max-width:390px){
+
+.hero-left h1{
+
+font-size:2rem;
+
+}
+
+.hero-panel{
+
+height:500px;
+
+}
+
+.phone-wrapper{
+
+transform:scale(.55);
+
+}
+
+.logo-img{
+
+height:42px;
+
+}
+
+.coin{
+
+width:46px;
+
+}
+
+}
+
+
+/* =================================
+slider
+================================= */
+
+@media (max-width:992px){
+
+.testimonial-card{
+
+    flex:0 0 calc((100% - 30px)/2);
+
+}
+
+}
+
+@media (max-width:768px){
+
+.slider-btn{
+
+    display:none;
+
+}
+
+.testimonial-wrapper{
+
+    overflow-x:auto;
+
+    scroll-snap-type:x mandatory;
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+.testimonial-track{
+
+    transform:none !important;
+
+}
+
+.testimonial-card{
+
+    flex:0 0 88%;
+
+    scroll-snap-align:start;
+
+}
+
+}
+
+/* ==========================================================
+   WHY US RESPONSIVE
+========================================================== */
+
+/* ==========================
+   Large Laptops
+========================== */
+
+@media (max-width:1200px){
+
+.features-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.feature-card{
+
+    padding:38px 28px;
+
+}
+
+}
+
+/* ==========================
+   Tablets
+========================== */
+
+@media (max-width:992px){
+
+#why-us{
+
+    padding:90px 0;
+
+}
+
+.section-title{
+
+    margin-bottom:55px;
+
+}
+
+.section-title h2{
+
+    font-size:40px;
+
+    line-height:1.2;
+
+}
+
+.features-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+.feature-card{
+
+    padding:34px 26px;
+
+}
+
+.feature-icon{
+
+    width:78px;
+
+    height:78px;
+
+    font-size:30px;
+
+    margin-bottom:24px;
+
+}
+
+.feature-card h3{
+
+    font-size:22px;
+
+}
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:768px){
+
+#why-us{
+
+    padding:75px 0;
+
+}
+
+.section-title{
+
+    margin-bottom:45px;
+
+}
+
+.section-title span{
+
+    font-size:13px;
+
+    letter-spacing:1.5px;
+
+}
+
+.section-title h2{
+
+    font-size:34px;
+
+    margin-top:14px;
+
+}
+
+.section-title p{
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    max-width:550px;
+
+    margin:18px auto 0;
+
+}
+
+.features-grid{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+.feature-card{
+
+    padding:32px 24px;
+
+    border-radius:22px;
+
+}
+
+.feature-icon{
+
+    width:72px;
+
+    height:72px;
+
+    font-size:28px;
+
+}
+
+.feature-card h3{
+
+    font-size:21px;
+
+    margin-bottom:14px;
+
+}
+
+.feature-card p{
+
+    font-size:15px;
+
+    line-height:1.75;
+
+}
+
+}
+
+/* ==========================
+   Small Phones
+========================== */
+
+@media (max-width:576px){
+
+#why-us{
+
+    padding:65px 0;
+
+}
+
+.section-title h2{
+
+    font-size:30px;
+
+}
+
+.section-title p{
+
+    font-size:15px;
+
+}
+
+.feature-card{
+
+    padding:28px 22px;
+
+}
+
+.feature-icon{
+
+    width:64px;
+
+    height:64px;
+
+    font-size:24px;
+
+    margin-bottom:20px;
+
+}
+
+.feature-card h3{
+
+    font-size:20px;
+
+}
+
+.feature-card p{
+
+    font-size:14px;
+
+}
+
+}
+
+/* ==========================
+   Very Small Phones
+========================== */
+
+@media (max-width:400px){
+
+.section-title h2{
+
+    font-size:27px;
+
+}
+
+.feature-card{
+
+    padding:24px 18px;
+
+}
+
+.feature-icon{
+
+    width:58px;
+
+    height:58px;
+
+    font-size:22px;
+
+}
+
+.feature-card h3{
+
+    font-size:18px;
+
+}
+
+}
+
+/* ==========================================================
+   HOW IT WORKS RESPONSIVE
+========================================================== */
+
+/* ==========================
+   Large Laptops
+========================== */
+
+@media (max-width:1200px){
+
+.steps-wrapper{
+
+    gap:20px;
+
+}
+
+.step-icon{
+
+    width:100px;
+
+    height:100px;
+
+    font-size:38px;
+
+}
+
+.step-card h3{
+
+    font-size:22px;
+
+}
+
+.step-card p{
+
+    max-width:200px;
+
+}
+
+.step-arrow{
+
+    width:60px;
+
+}
+
+}
+
+/* ==========================
+   Tablets
+========================== */
+
+@media (max-width:992px){
+
+#how-it-works{
+
+    padding:90px 0;
+
+}
+
+.steps-wrapper{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.step-arrow{
+
+    display:none;
+
+}
+
+.step-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:35px 25px;
+
+    box-shadow:0 15px 40px rgba(15,23,42,.06);
+
+}
+
+.step-icon{
+
+    width:90px;
+
+    height:90px;
+
+    font-size:34px;
+
+    margin-bottom:22px;
+
+}
+
+.step-card h3{
+
+    font-size:22px;
+
+}
+
+.step-card p{
+
+    max-width:100%;
+
+}
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:768px){
+
+#how-it-works{
+
+    padding:75px 0;
+
+}
+
+.steps-wrapper{
+
+    grid-template-columns:1fr;
+
+    gap:24px;
+
+    margin-top:50px;
+
+}
+
+.step-card{
+
+    padding:30px 22px;
+
+}
+
+.step-icon{
+
+    width:82px;
+
+    height:82px;
+
+    font-size:30px;
+
+    border-radius:22px;
+
+}
+
+.step-card h3{
+
+    font-size:20px;
+
+    margin-bottom:14px;
+
+}
+
+.step-card p{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+}
+
+/* ==========================
+   Small Phones
+========================== */
+
+@media (max-width:576px){
+
+#how-it-works{
+
+    padding:65px 0;
+
+}
+
+.step-card{
+
+    padding:26px 20px;
+
+}
+
+.step-icon{
+
+    width:72px;
+
+    height:72px;
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+}
+
+.step-card h3{
+
+    font-size:18px;
+
+}
+
+.step-card p{
+
+    font-size:14px;
+
+}
+
+}
+
+/* ==========================
+   Very Small Phones
+========================== */
+
+@media (max-width:400px){
+
+.step-card{
+
+    padding:22px 18px;
+
+}
+
+.step-icon{
+
+    width:64px;
+
+    height:64px;
+
+    font-size:24px;
+
+}
+
+.step-card h3{
+
+    font-size:17px;
 
 }
 

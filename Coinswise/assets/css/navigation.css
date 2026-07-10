@@ -84,7 +84,7 @@ LOGO
 }
 
 .logo-img{
-    height:170px;
+    height:70px;
     width:auto;
     display:block;
     object-fit:contain;
@@ -106,7 +106,7 @@ MENU
 
     align-items:center;
 
-    gap:28px;
+    gap:24px;
 
     list-style:none;
 
@@ -276,7 +276,7 @@ body{
     top:0;
     right:-100%;
 
-    width:300px;
+    width:200px;
     height:100vh;
 
     background:#fff;
@@ -342,7 +342,7 @@ body{
 
 .logo-img{
 
-    height:50px;
+    height:70px;
 
 }
 

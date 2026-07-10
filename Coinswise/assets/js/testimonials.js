@@ -1,72 +1,131 @@
-/* ==========================================
-Testimonials Slider
-========================================== */
+/* ==========================================================
+   CoinsWise Testimonials Carousel
+========================================================== */
 
-const track = document.querySelector(".testimonial-track");
+document.addEventListener("DOMContentLoaded", () => {
 
-const next = document.querySelector(".next");
+    const wrapper = document.querySelector(".testimonial-wrapper");
+    const track = document.querySelector(".testimonial-track");
+    const cards = document.querySelectorAll(".testimonial-card");
+    const next = document.querySelector(".next");
+    const prev = document.querySelector(".prev");
 
-const prev = document.querySelector(".prev");
+    if (!wrapper || !track || cards.length === 0) return;
 
-let current = 0;
+    let current = 0;
+    let autoplay;
 
-const cards = document.querySelectorAll(".testimonial-card");
+    function visibleCards() {
 
-function updateSlider(){
-
-    const width = cards[0].offsetWidth + 30;
-
-    track.style.transform =
-        `translateX(-${current * width}px)`;
-
-}
-
-next?.addEventListener("click",()=>{
-
-    if(current < cards.length - 1){
-
-        current++;
-
-    }else{
-
-        current = 0;
+        if (window.innerWidth <= 768) return 1;
+        if (window.innerWidth <= 992) return 2;
+        return 3;
 
     }
 
-    updateSlider();
+    function cardWidth() {
 
-});
+        const gap =
+            parseFloat(getComputedStyle(track).gap);
 
-prev?.addEventListener("click",()=>{
+        return cards[0].offsetWidth + gap;
 
-    if(current > 0){
+    }
+
+    function updateSlider(animated = true) {
+
+        if (window.innerWidth <= 768) {
+
+            track.style.transform = "none";
+            return;
+
+        }
+
+        track.style.transition = animated
+            ? "transform .55s ease"
+            : "none";
+
+        track.style.transform =
+            `translateX(-${current * cardWidth()}px)`;
+
+    }
+
+    function nextSlide() {
+
+        current++;
+
+        if (current > cards.length - visibleCards()) {
+
+            current = 0;
+
+        }
+
+        updateSlider();
+
+    }
+
+    function prevSlide() {
 
         current--;
 
-    }else{
+        if (current < 0) {
 
-        current = cards.length - 1;
+            current =
+                cards.length - visibleCards();
+
+        }
+
+        updateSlider();
 
     }
 
-    updateSlider();
+    function startAutoplay() {
+
+        stopAutoplay();
+
+        autoplay = setInterval(nextSlide, 5000);
+
+    }
+
+    function stopAutoplay() {
+
+        clearInterval(autoplay);
+
+    }
+
+    next?.addEventListener("click", () => {
+
+        nextSlide();
+
+        startAutoplay();
+
+    });
+
+    prev?.addEventListener("click", () => {
+
+        prevSlide();
+
+        startAutoplay();
+
+    });
+
+    wrapper.addEventListener("mouseenter", stopAutoplay);
+    wrapper.addEventListener("mouseleave", startAutoplay);
+
+    window.addEventListener("resize", () => {
+
+        if (current > cards.length - visibleCards()) {
+
+            current = 0;
+
+        }
+
+        updateSlider(false);
+
+    });
+
+    updateSlider(false);
+
+    startAutoplay();
 
 });
-
-window.addEventListener("resize",updateSlider);
-
-setInterval(()=>{
-
-    if(current < cards.length - 1){
-
-        current++;
-
-    }else{
-
-        current = 0;
-
-    }
-
-    updateSlider();
-
-},5000);
