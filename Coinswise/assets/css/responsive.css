@@ -179,7 +179,7 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
-.rates-card{
+/* .rates-card{
 
 overflow-x:auto;
 
@@ -187,9 +187,9 @@ overflow-x:auto;
 
 table{
 
-min-width:760px;
+min-width:700px;
 
-}
+} */
 
 }
 

@@ -2,7 +2,7 @@
 ========================================================== */
 
 const API_URL =
-"https://api.coingecko.com/api/v3/coins/markets?vs_currency=ngn&ids=bitcoin,ethereum,tether,binancecoin&order=market_cap_desc&per_page=4&page=1&sparkline=false";
+"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,tether,binancecoin&order=market_cap_desc&per_page=4&page=1&sparkline=false";
 
 /* ==========================================
    DOM
@@ -14,17 +14,17 @@ const ratesBody = document.getElementById("rates-body");
    Currency Formatter
 ========================================== */
 
-function formatNGN(value) {
+function formatUSD(value) {
 
-    return new Intl.NumberFormat("en-NG", {
+    return new Intl.NumberFormat("en-US", {
 
         style: "currency",
 
-        currency: "NGN",
+        currency: "USD",
 
-        minimumFractionDigits: 0,
+        minimumFractionDigits: 2,
 
-        maximumFractionDigits: 0
+        maximumFractionDigits: 2
 
     }).format(value);
 
@@ -104,25 +104,25 @@ function buildRow(coin) {
 
 </td>
 
-<td>
+<td data-label="Buy">
 
-${formatNGN(buyPrice)}
-
-</td>
-
-<td>
-
-${formatNGN(sellPrice)}
+${formatUSD(buyPrice)}
 
 </td>
 
-<td class="${percentageClass(coin.price_change_percentage_24h)}">
+<td data-label="Sell">
+
+${formatUSD(sellPrice)}
+
+</td>
+
+<td data-label="24h" class="${percentageClass(coin.price_change_percentage_24h)}">
 
 ${percentageValue(coin.price_change_percentage_24h)}
 
 </td>
 
-<td>
+<td data-label="Trade">
 
 <a
 
@@ -195,9 +195,7 @@ function errorState() {
     `;
     
 }
-/* ==========================================
-   Fetch Rates
-========================================== */
+
 
 /* ==========================================
    Fetch Live Rates
@@ -257,7 +255,7 @@ async function fetchRates() {
                 
                 dashboardElement.textContent =
                     
-                    formatNGN(coin.current_price);
+                    formatUSD(coin.current_price);
                 
             }
             
@@ -277,7 +275,7 @@ async function fetchRates() {
             
             portfolio.textContent =
                 
-                formatNGN(portfolioTotal);
+                formatUSD(portfolioTotal);
             
         }
         
